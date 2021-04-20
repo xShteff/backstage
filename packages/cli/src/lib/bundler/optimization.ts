@@ -15,9 +15,8 @@
  */
 
 import { WebpackOptionsNormalized } from 'webpack';
-import TerserPlugin from 'terser-webpack-plugin';
+import { ESBuildMinifyPlugin } from 'esbuild-loader';
 import { BundlingOptions } from './types';
-import { isParallelDefault } from '../parallel';
 
 export const optimization = (
   options: BundlingOptions,
@@ -26,16 +25,12 @@ export const optimization = (
 
   return {
     minimize: !isDev,
-    // Only configure when parallel is explicitly overriden from the default
-    ...(!isParallelDefault(options.parallel)
-      ? {
-          minimizer: [
-            new TerserPlugin({
-              parallel: options.parallel,
-            }),
-          ],
-        }
-      : {}),
+    minimizer: [
+      new ESBuildMinifyPlugin({
+        target: 'es2019',
+        css: true,
+      }),
+    ],
     runtimeChunk: 'single',
     splitChunks: {
       automaticNameDelimiter: '-',

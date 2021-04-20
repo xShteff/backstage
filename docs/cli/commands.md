@@ -101,10 +101,9 @@ process.env.BUILD_INFO = {
 Some CI environments do not properly report correct resource limits, potentially
 leading to errors such as `ENOMEM` during compilation. If you run into this
 issue you can limit the parallelization of the build process by setting the
-environment variable `BACKSTAGE_CLI_BUILD_PARALLEL`, which is forwarded to the
-[`terser-webpack-plugin`](https://github.com/webpack-contrib/terser-webpack-plugin#parallel).
-You can set it to `false` or `1` to completely disable parallelization, but
-usually a low value such as `2` is enough.
+environment variable `BACKSTAGE_CLI_BUILD_PARALLEL`. You can set it to `false`
+or `1` to completely disable parallelization, but usually a low value such as
+`2` is enough.
 
 ```text
 Usage: backstage-cli app:build
