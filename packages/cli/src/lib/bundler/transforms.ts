@@ -86,7 +86,7 @@ export const transforms = (options: TransformOptions): Transforms => {
       loader: require.resolve('url-loader'),
       options: {
         limit: 10000,
-        name: 'static/[name].[hash:8].[ext]',
+        name: 'static/[name].[fullhash:8].[ext]',
       },
     },
     {

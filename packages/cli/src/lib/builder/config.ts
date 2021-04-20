@@ -46,7 +46,7 @@ export const makeConfigs = async (
       output.push({
         dir: 'dist',
         entryFileNames: 'index.cjs.js',
-        chunkFileNames: 'cjs/[name]-[hash].cjs.js',
+        chunkFileNames: 'cjs/[name]-[fullhash].cjs.js',
         format: 'commonjs',
         sourcemap: true,
       });
@@ -55,7 +55,7 @@ export const makeConfigs = async (
       output.push({
         dir: 'dist',
         entryFileNames: 'index.esm.js',
-        chunkFileNames: 'esm/[name]-[hash].esm.js',
+        chunkFileNames: 'esm/[name]-[fullhash].esm.js',
         format: 'module',
         sourcemap: true,
       });

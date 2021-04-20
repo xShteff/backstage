@@ -198,7 +198,7 @@ export async function createConfig(
     output: {
       path: paths.targetDist,
       publicPath: validBaseUrl.pathname,
-      filename: isDev ? '[name].js' : 'static/[name].[hash:8].js',
+      filename: isDev ? '[name].js' : 'static/[name].[fullhash:8].js',
       chunkFilename: isDev
         ? '[name].chunk.js'
         : 'static/[name].[chunkhash:8].chunk.js',
@@ -280,7 +280,7 @@ export async function createBackendConfig(
     },
     output: {
       path: paths.targetDist,
-      filename: isDev ? '[name].js' : '[name].[hash:8].js',
+      filename: isDev ? '[name].js' : '[name].[fullhash:8].js',
       chunkFilename: isDev
         ? '[name].chunk.js'
         : '[name].[chunkhash:8].chunk.js',
