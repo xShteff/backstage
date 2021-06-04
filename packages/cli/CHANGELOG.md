@@ -1,5 +1,11 @@
 # @backstage/cli
 
+## 0.6.15
+
+### Patch Changes
+
+- 7f7443308: Updated dependencies
+
 ## 0.6.14
 
 ### Patch Changes

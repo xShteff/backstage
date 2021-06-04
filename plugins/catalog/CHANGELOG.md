@@ -1,5 +1,11 @@
 # @backstage/plugin-catalog
 
+## 0.6.2
+
+### Patch Changes
+
+- db1c8f93b: A `<CatalogResultListItem />` component is now available for use in custom Search Experiences.
+
 ## 0.6.1
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @backstage/plugin-catalog-backend
 
+## 0.10.2
+
+### Patch Changes
+
+- 9c63be545: Restructure the next catalog types and files a bit
+- Updated dependencies [db1c8f93b]
+  - @backstage/search-common@0.1.2
+  - @backstage/plugin-search-backend-node@0.1.5
+
 ## 0.10.1
 
 ### Patch Changes
